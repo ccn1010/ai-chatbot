@@ -237,6 +237,7 @@ export async function POST(request: Request) {
     if (error instanceof ChatSDKError) {
       return error.toResponse();
     }
+    throw error;
   }
 }
 
